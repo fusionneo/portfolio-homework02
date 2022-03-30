@@ -351,6 +351,22 @@ img {
   overflow: hidden;
 }
 
+.work__img_main {
+  display: flex;
+  justify-content: center;
+}
+
+.work__img_main::after {
+  content: "First Project";
+  position: absolute;
+  background-color: #fff;
+  color: var(--first-color);
+  white-space: normal;
+  font-weight: bold;
+  text-align: left;
+  font-size: 20px;
+}
+
 .work__img::after {
   content: "Project Placeholder";
   position: absolute;
@@ -367,7 +383,15 @@ img {
   transition: 1s;
 }
 
+.work__img_main img {
+  transition: 1s;
+}
+
 .work__img img:hover {
+  transform: scale(1.1);
+}
+
+.work__img_main img:hover {
   transform: scale(1.1);
 }
 
